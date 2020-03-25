@@ -50,6 +50,22 @@
     height: 30px;
     width: 266px;
     margin: 10px 0;
+    /* position: absolute; */
+}
+/* .tl{
+    width:50px;
+    height: 30px;
+    text-align:center;
+    line-height:30px;
+    margin: 0;
+    position: relative;
+    left: 100px;
+    background-color: red;
+    z-index: 100;
+    padding: 0;
+} */
+.br{
+    height: 100%;
 }
 .notepad-dlg-goto input[type='button']{
     width: 86px;
@@ -58,7 +74,6 @@
 .notepad-dlg-goto .btn-goto{
     position: absolute;
     right: 100px;
-    /* top: 16px; */
 }
 .notepad-dlg-goto .btn-cancle{
     position: absolute;
