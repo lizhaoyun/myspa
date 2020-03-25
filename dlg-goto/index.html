@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./dlg.css">
+</head>
+<body>
+    <!-- <input id='pdlg' type="button" value="弹出对话框"/> -->
+    <!-- <hr> -->
+    <div class="notepad-dlg-goto">
+        <div class="dialogbox">
+            <div class="titlebar">
+                <p class="title">转到指定行</p>
+                <span class="close-btn">X</span>
+            </div>
+            <div class="main">
+                <label for="">行号(L)</label>
+                <br>
+                <input class="txt-line-num" autofocus type="text">
+                <br>
+                <input class="btn-goto" type="button" value="转到" name="" >
+                <input class="btn-cancle" type="button" value="取消" name="" >
+            </div>
+        </div>
+    </div>
+
+</body>
+<script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="./dlg.js"></script>
+<script>
+    $(function(){
+        var btndlg = $('#pdlg');
+        btndlg.click(function(){
+            dlgGoto.show({
+                container:'#main',
+                num:6,
+                title:'发送验证',
+                onClick:function(){
+                    console.log('点击了定时器按钮！');
+                }
+            });
+            console.log('add timerbtn');
+        });
+    });
+
+</script>
+</html>
