@@ -61,7 +61,6 @@ var dlgGoto = (function () {
             }else{
                 console.log('GOTO line:'+num);
                 dlg.remove();
-
             }
         })
 
