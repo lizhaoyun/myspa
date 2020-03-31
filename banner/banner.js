@@ -1,7 +1,6 @@
 
 function Banner() {
-    var box = $('#box');
-    var a = $('' +
+    var content = $('' +
         '<div class="slider" id="slider">' +
         '<div class="slide"><img src="img/b5.png" alt=""></div>' +
         '<div class="slide"><img src="img/b1.png" alt=""></div>' +
@@ -21,11 +20,18 @@ function Banner() {
         '<li>5</li>' +
         '</ul>'
     );
+    var initfg={
+        time:3000,
+        container:'body'
+    };
+    
 
 
-    this.show = function () {
-        box.append(a);
-        console.log('banner show');
+    this.show = function (config) {
+
+        $(config.container).append(content);
+        $.extend(initfg, config);
+
         var tab = $('#navs');
         var tli = $('li');
         var slider = $('#slider');
@@ -34,27 +40,16 @@ function Banner() {
         var nowidx = 1;
         var isMoving = false;
         var timer;
-        var flg = true;
+        
 
         function changeCss() {
-            // slider.css({
-            //     left: -1200 - nowidx * 1200 + 'px'
-            // });
-            // tli.attr('class', '');
-            // $('li').eq(nowidx).attr('class', 'active');
-            // $('img').eq(nowidx).animate({
-            //     left: nowidx * 1200 + 'px'
-            // },1000,function(){
-            //     tli.attr('class', '');
-            //     $('li').eq(nowidx).attr('class', 'active');
-            //     $('img').eq(nowidx-1).css({"left":"0","display":"none"});
-            //     $('img').eq(nowidx-1).css('z-index','1');
-            // })
 
-            // console.log('初始:'+nowidx);
+            var drutiontime=Math.floor(config.time/2);
+            console.log(drutiontime);
+
             slider.animate({
                 left: -1200 * nowidx + 'px'
-            }, 1000, function () {
+            },drutiontime,function () {
                 switch (nowidx) {
                     case 0:
                         nowidx = 5;
@@ -81,20 +76,18 @@ function Banner() {
                         $('li').eq(nowidx - 1).attr('class', 'active');
                         break;
                 }
+               
                 isMoving = false;
             });
         }
 
 
         function startInterval() {
-            // if(!isMoving)
-            //     return;
-            // isMoving=true;
             timer = setInterval(function () {
                 nowidx = (nowidx++) > 6 ? 6 : nowidx;
                 console.log('定时器' + nowidx);
                 changeCss();
-            }, 3000);
+            }, config.time);
         }
 
         function spanShow() {
@@ -154,16 +147,13 @@ function Banner() {
         rspan.click(function () {
             // console.log('→');
             // nowidx = nowidx >= (tli.length - 1) ? 0 : (nowidx + 1);
-            // nowidx = nowidx >= 5 ? 0 : (nowidx + 1);
             // changeCss(nowidx);
-
             // console.log(nowidx + 'kkkkk', nowidx > (tli.length - 1));
             // console.log($('li')[nowidx]);
 
             if (isMoving) {
                 return;
             }
-            // console.log(flg);
             isMoving = true;
             nowidx++;
             // if(nowidx>6)
