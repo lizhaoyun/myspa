@@ -1,0 +1,143 @@
+/* 
+.notepad-dlg-goto .dialogbox{
+    border: 1px solid rgb(98, 98, 255);
+    box-shadow: 8px 8px 8px grey;
+    box-sizing: border-box;
+    cursor: default;
+    width: 295px;
+    height: 160px;
+    margin: 0 auto;
+    position: relative;
+    top: 100px;
+    user-select: none;
+}
+.notepad-dlg-goto .titlebar{
+    background-color: #fff;
+    font-size: 1em;
+    height: 30px;
+}
+.notepad-dlg-goto .title{
+    position: absolute;
+    left: 10px;
+    line-height: 30px;
+    margin: 0;
+}
+.notepad-dlg-goto .close-btn{
+    color: grey;
+    height: 30px;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    width: 30px;
+}
+.notepad-dlg-goto .main{
+    background-color: #f0f0f0;
+    box-sizing: border-box;
+    height: 127px;
+    padding: 12px;
+    position: relative;
+}
+.notepad-dlg-goto .txt-line-num{
+    box-sizing: border-box;
+    height: 30px;
+    width: 266px;
+    margin: 10px 0;
+}
+.br{
+    height: 100%;
+}
+.notepad-dlg-goto input[type='button']{
+    width: 86px;
+    height: 26px;
+}
+.notepad-dlg-goto .btn-goto{
+    position: absolute;
+    right: 100px;
+}
+.notepad-dlg-goto .btn-cancle{
+    position: absolute;
+    right: 12px;
+    bottom: 19px;
+} */
+.notepad-dlg-about{
+    width: 100%;
+    height:100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 10;
+    background-color: rgba(255, 0, 0, 0.007);
+    cursor: default;
+    user-select: none;
+}
+.dialogbox{
+    width: 700px;
+    height:600px;
+    margin: 0 auto;
+    margin-top: 100px;
+    border: 1px solid gray;
+    background-color: rgba(208, 221, 230, 0.24);
+    position: relative;
+}
+.titlebar{
+    width: 100%;
+    height:30px;
+    position: relative;
+    top:0;
+    background-color:#fff;
+}
+.title{
+    line-height: 30px;
+    padding-left: 5px;
+}
+.close-btn{
+    color: grey;
+    width: 20px;
+    height: 30px;
+    position: absolute;
+    right: 0;
+    top:5px;
+}
+.main{
+    padding:25px;
+    padding-top: 0;
+}
+.txt{
+    height: 450px;
+    margin: 0 auto;
+    position: relative;
+}
+.txt .logotitle{
+    width: 45%;
+    margin: 0 auto;
+    padding-top: 15px;
+}
+.logotitle>span{
+    /* float: right; */
+    font-size: 35px;
+    color: rgb(17, 91, 202);
+    position: absolute;
+    top:30px;
+    right: 168px;
+}
+.txt>img{
+    position: absolute;
+    top:125px;
+}
+.content{
+    position: absolute;
+    right: 5px;
+    top:106px;
+    line-height: 25px;
+}
+.content .btxt{
+    padding-left: 35px;
+    line-height: 40px;
+}
+.btn-goto{
+    width: 90px;
+    height: 35px;
+    position: absolute;
+    right: 15px;
+    bottom: 20px;
+}
