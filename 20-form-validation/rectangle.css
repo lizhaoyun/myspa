@@ -1,0 +1,27 @@
+body{
+    height:600px ;
+}
+#busuanzi_container_site_uv{
+    bottom: 0;
+    position: absolute;
+    right:0;
+}
+.content{
+    font-size: 1.1em;
+    /* height:50%; */
+    /* margin:0 auto; */
+    margin-left: 36%;
+    padding-top: 10%;
+}
+.cal{
+    margin-left: 60px;
+    width:80px;
+}
+input,label{
+    font-size: 1em;
+    margin:5px 2px;
+    padding-left: 10px;
+}
+span{
+    color: red;
+}
